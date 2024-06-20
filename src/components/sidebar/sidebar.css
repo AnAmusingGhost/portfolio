@@ -23,6 +23,7 @@
     font-size: 1.5rem;
     color:var(--title-color);
     font-weight: var(--font-bold);
+    transition: .3s ;
 }
 
 .copyright{
@@ -31,3 +32,8 @@
     transform:rotate(-180deg);
     writing-mode:vertical-rl;
 }
+
+.nav__link:hover{
+    color:hsl(45,100%,68%);
+}
+
