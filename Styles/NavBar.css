@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-html, body{
-    background-color: #ffffff !important;
-    background: #ffffff !important;
+html,
+body {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
 }
 
 /* Font styles for Comfortaa */
@@ -35,7 +36,6 @@ html, body{
   font-style: normal;
 }
 
-
 .comfortaa-bold {
   font-family: "Comfortaa", sans-serif;
   font-optical-sizing: auto;
@@ -55,13 +55,11 @@ html, body{
   font-style: normal;
 }
 
-
 .worksans-medium {
   font-family: "Work Sans", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
-
 
 .worksans-semibold {
   font-family: "Work Sans", sans-serif;
@@ -82,90 +80,89 @@ worksans-regular-italic {
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    padding-top: 70px; 
+  padding-top: 70px;
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-    position: fixed;
-    top: 0; 
-    left: 0;
-    background-color: white; 
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .name-container {
-    font-size: 20px;
-    margin-left: 20px;
+  font-size: 20px;
+  margin-left: 20px;
 }
 
 .links-container {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    margin-right: 20px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-right: 20px;
 }
 
 .nav-link {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    padding: 8px 16px;
-    border-radius: 0; /* Removed rounded corners */
-    position: relative; /* Added for underline positioning */
-    transition: all 0.3s ease; /* Smooth transition */
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 0;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
 .nav-link.active {
-    font-weight: bold;
-    background-color: transparent; /* Removed purple background */
-    color: #6366F1; /* Slightly darker purple for text */
+  font-weight: bold;
+  background-color: transparent;
+  color: #6366f1;
 }
 
 .nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 8px;
-    right: 8px;
-    height: 3px;
-    background-color: #6366F1; /* Purple underline */
-    border-radius: 3px 3px 0 0;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  height: 3px;
+  background-color: #6366f1;
+  border-radius: 3px 3px 0 0;
 }
 
 .nav-link:hover:not(.active) {
-    background-color: transparent; /* Removed hover background */
-    color: #6366F1; /* Consistent hover color */
-}
+  background-color: transparent;
+  color: #6366f1;
 
-.nav-link:hover:not(.active)::after {
-    content: '';
+  .nav-link:hover:not(.active)::after {
+    content: "";
     position: absolute;
     bottom: 0;
     left: 8px;
     right: 8px;
-    height: 2px; /* Slightly thinner than active */
-    background-color: #e6e4f9; /* Lighter purple for hover */
+    height: 2px;
+    background-color: #e6e4f9;
     border-radius: 3px 3px 0 0;
-}
+  }
 
-.hamburger {
+  .hamburger {
     display: none;
     cursor: pointer;
-}
+  }
 
-.bar {
+  .bar {
     display: block;
     width: 25px;
     height: 3px;
@@ -173,69 +170,70 @@ body {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     background-color: #000;
-}
+  }
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .nav-container {
-        position: fixed;
-        z-index: 1000;
-        background-color: white;
+      position: fixed;
+      z-index: 1000;
+      background-color: white;
     }
 
     .hamburger {
-        display: block;
-        margin-right: 20px;
-        position: relative;
-        z-index: 1001;
+      display: block;
+      margin-right: 20px;
+      position: relative;
+      z-index: 1001;
     }
 
     .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
+      opacity: 0;
     }
 
     .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+      transform: translateY(8px) rotate(45deg);
     }
 
     .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+      transform: translateY(-8px) rotate(-45deg);
     }
 
     .links-container {
-        position: fixed;
-        left: -100%;
-        top: 0; 
-        height: 100vh;
-        gap: 0;
-        flex-direction: column;
-        justify-content: center;
-        background-color: white;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-        padding-top: 60px; 
+      position: fixed;
+      left: -100%;
+      top: 0;
+      height: 100vh;
+      gap: 0;
+      flex-direction: column;
+      justify-content: center;
+      background-color: white;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      padding-top: 60px;
     }
 
     .links-container.active {
-        left: 0;
+      left: 0;
     }
 
     .nav-link {
-        margin: 15px 0;
-        font-size: 22px;
+      margin: 15px 0;
+      font-size: 22px;
     }
 
     .nav-link.active::after {
-        left: 40%;
-        right: 40%;
-        bottom: -5px;
+      left: 40%;
+      right: 40%;
+      bottom: -5px;
     }
-    
+
     .nav-link:hover:not(.active)::after {
-        left: 40%;
-        right: 40%;
-        bottom: -5px;
+      left: 40%;
+      right: 40%;
+      bottom: -5px;
     }
+  }
 }
