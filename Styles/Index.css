@@ -76,3 +76,11 @@
 }
 
 /* Project Section */
+
+.projects-section {
+    max-width: 3200px;
+    margin: 0 auto 6rem;
+    padding: 0 2rem;
+}
+
+
